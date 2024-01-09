@@ -100,31 +100,6 @@ trait BootstrapContainerTrait
 	}
 
 	/**
-	 * Adds a datetime input.
-	 */
-	public function addDate(string $name, string $label): DateInput
-	{
-		$comp = new DateInput($label, null);
-		$comp->setNullable(BootstrapForm::$allwaysUseNullable);
-		$this->addComponent($comp, $name);
-
-		return $comp;
-	}
-
-	/**
-	 * @param string|Html|null $label
-	 * Adds a datetime input.
-	 */
-	public function addDateTime(string $name, $label): DateTimeInput
-	{
-		$comp = new DateTimeInput($label);
-		$comp->setNullable(BootstrapForm::$allwaysUseNullable);
-		$this->addComponent($comp, $name);
-
-		return $comp;
-	}
-
-	/**
 	 * @param Html|string|null $label
 	 * @return TextInput
 	 */
